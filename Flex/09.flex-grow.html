@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			.box{
+				display:flex;
+				border: 1px purple solid;
+				width:600px;
+				height: 300px;
+				margin: 0 auto;
+				flex-direction:row;	
+				padding: 10px;
+			}	
+			.box li{
+				background: yellowgreen;
+				font-size: 30px;
+				text-align: center;
+				line-height: 50px;
+				flex-grow: 1;
+				width: 100px;
+			}	
+			.box li.grow{
+				flex-grow:2;
+				background: green;
+			}	
+			/*
+				flex-grow属性定义项目的放大比例，占多少分量；默认为0，即如果存在剩余空间，也不放大；
+				容器ul 600px；
+				三个li，li长度100px;
+				第1个和第3个li grow:1;
+				第2个li grow:2;
+				容器600PX，li width 100px,剩余空间 600-(3*100)=300px
+				grow一共4份，占300/4 1份75px;
+				所以第1个和第3个Li为100+75，第2个li位100+（75*2）;
+				如果不规定LI的长度，如果无内容，为空元素，则600/4平分，
+				如果有内容，则600-内容长度 / 4 平分。
+			 */		
+		</style>
+	</head>
+	<body>
+		<ul class="box">
+			<li>1</li>
+			<li class="grow">2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>

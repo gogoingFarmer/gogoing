@@ -1,17 +1,17 @@
 "use strict";
-var Greeter = /** @class */ (function () {
-    function Greeter(message) {
+var myGreeters = /** @class */ (function () {
+    function myGreeters(message) {
         this.greeting = message;
     }
-    Greeter.prototype.greet = function () {
+    myGreeters.prototype.greet = function () {
         return 'hello, ' + this.greeting;
     };
-    return Greeter;
+    return myGreeters;
 }());
-var greeter = new Greeter('world');
-var button = document.createElement('button');
-button.textContent = 'Say Hello';
-button.onclick = function () {
-    alert(greeter.greet());
+var mygreeter = new myGreeters('world');
+var mybutton = document.createElement('button');
+mybutton.textContent = 'Say Hello';
+mybutton.onclick = function () {
+    alert(mygreeter.greet());
 };
-document.body.appendChild(button);
+document.body.appendChild(mybutton);

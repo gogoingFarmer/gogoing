@@ -1,4 +1,4 @@
-class Greeter{
+class myGreeters{
     greeting:string;
     constructor(message:string){
         this.greeting = message;
@@ -7,10 +7,11 @@ class Greeter{
         return 'hello, ' + this.greeting;
     }
 }
-let greeter = new Greeter('world');
-let button = document.createElement('button');
-button.textContent = 'Say Hello';
-button.onclick = function(){
-    alert(greeter.greet())
+let mygreeter = new myGreeters('world');
+let mybutton= document.createElement('button');
+mybutton.textContent = 'Say Hello';
+mybutton.onclick = function(){
+    alert(mygreeter.greet())
 }
-document.body.appendChild(button)
+document.body.appendChild(mybutton)
+

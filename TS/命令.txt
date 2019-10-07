@@ -1,7 +1,7 @@
 1.全局安装ts npm install -g typescript 或者 npm i typescript -g
 2.初始化tsconfig.json tsc --init
 3.安装Live Server，可当前JS打开页面。
-4.自动TS转换成JS，搜索tsc,安装插件TypeScript Auto Compiler
-5.tsc xx.ts 转换成JS
-6.tsc 全部ts转换成JS
+4.tsc xx.ts 转换成JS
+5.tsc 全部ts转换成JS
+7.自动TS转换成JS，搜索tsc,安装插件TypeScript Auto Compiler
 

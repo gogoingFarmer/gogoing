@@ -1,0 +1,2 @@
+1、下拉刷新插件
+react-infinite-scroller

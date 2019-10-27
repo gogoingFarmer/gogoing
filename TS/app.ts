@@ -14,4 +14,3 @@ mybutton.onclick = function(){
     alert(mygreeter.greet())
 }
 document.body.appendChild(mybutton)
-

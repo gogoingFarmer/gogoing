@@ -5,5 +5,4 @@
 5、初始化cmd输入tsc --init，生成tsconfig.json(自动转化JS)
 6、自动TS转换成JS，搜索tsc，安装插件TypeScript Auto Compiler
 
-7、tsc --oyutfile.xxx.js xxx.ts xxx.ts xxx.ts 合成js
 

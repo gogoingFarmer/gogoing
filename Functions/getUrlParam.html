@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getUrlParam</title>
+</head>
+<body>
+<script>
+    // 获取参数
+    function getUrlParam(name) {
+        // 截取域名 - gogoing/Functions/getUrlParam.html?param=123456
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); // name=xxx => 截取xxx
+        var r = window.location.search.substr(1).match(reg); 
+        console.log('window.location.search',window.location.search)  // ?param=123456
+        console.log('window.location.search.substr',window.location.search.substr(1)) // param=123456
+        console.log('window.location.search.substr(1).match(reg)',window.location.search.substr(1).match(reg)) // REG对象
+        console.log(unescape(r[2])) // 123456 需要用到的参数
+        if (r != null) return unescape(r[2]);
+        return null;
+    }    
+    console.log(getUrlParam("param")) // 123456
+</script>
+</body>
+</html>

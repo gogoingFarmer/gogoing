@@ -1,25 +1,29 @@
-// 基本数据类型
 
-// 1、number
-let num = 25;
-let flo = 25.5;
-let hex = 0xf000;       // 16进制
-let binary = 0b1001;    // 2进制
-let octal = 0o733;      // 8进制
+/*
+    number类型，可定义2,8,10,16进制。
+*/
 
-// 重新赋值
-//let num = '25' // 报错，不能更改原来的类型
+let num1:number = 25; // 同 let num1 = 25;
+let decLiteral: number = 6; // 十
+let hexLiteral: number = 0xf00d; // 十六
+let binaryLiteral: number = 0b1010; // 二
+let octalLiteral: number = 0o744;  // 八
 
-// ts原型
-let num1:number = 25; // 等同于 let num1 = 25;
+/*
+    boolean类型，1不等于true,0不等于false
+*/
 
-// 2、boolean
-let isLogin:boolean = false // 等同于 let isLogin = false
-// isLogin = 1 // 不能改变
+let isLogin:boolean = false // 同 let isLogin = false
 
-// 3、string
-let str:string = 'hello world'
+/*
+    string类型
+*/
 
-// 4、any
+let str:string = 'hello world';
+let str2:string = `bye bye ${str}`
+
+/*
+    any类型
+*/
+
 let anything:any; // let anything;
-

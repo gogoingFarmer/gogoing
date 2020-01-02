@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>format函数</title>
+</head>
+<body>
+    <script>
+        // 时间戳-转换成-字符串形势 时间格式
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt))fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt))
+                    fmt = fmt.replace(
+                        RegExp.$1, (RegExp.$1.length == 1)?(o[k]):
+                        (("00" + o[k]).substr(("" + o[k]).length))
+                    );
+            return fmt;
+        }
+
+        // 也可以转换格式，改变间隔符号
+        function changeTime(s){
+            s= s.replace('-','/');
+            var t = Date.parse(s);// 转换成时间戳
+            return new Date(t).format("yyyy-MM-dd hh:mm:ss");
+        }
+
+        let time1 = 1218154088000;
+        let time2 = '2012-12-25 00:00:00';
+        let time3 = '2015/11/11 00:00:00'
+
+        console.log( new Date(time1).format("yyyy-MM-dd hh:mm:ss") ) // 2008-08-08 08:08:08
+        console.log( changeTime(time2) ) // 2012-12-25 00:00:00 ///转换成-
+        console.log(new Date(time3).format("yyyy-^-^-MM-^-^-dd hh:-x-x-:mm:-x-x-:ss"))
+    </script>
+</body>
+</html>

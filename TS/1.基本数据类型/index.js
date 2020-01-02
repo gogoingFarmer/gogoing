@@ -1,19 +1,22 @@
 "use strict";
-// 基本数据类型
-// 1、number
-var num = 25;
-var flo = 25.5;
-var hex = 0xf000; // 16进制
-var binary = 9; // 2进制
-var octal = 475; // 8进制
-// 重新赋值
-//let num = '25' // 报错，不能更改原来的类型
-// ts原型
-var num1 = 25; // 等同于 let num1 = 25;
-// 2、boolean
-var isLogin = false; // 等同于 let isLogin = false
-// isLogin = 1 // 不能改变
-// 3、string
+/*
+    number类型，可定义2,8,10,16进制。
+*/
+var num1 = 25; // 同 let num1 = 25;
+var decLiteral = 6; // 十
+var hexLiteral = 0xf00d; // 十六
+var binaryLiteral = 10; // 二
+var octalLiteral = 484; // 八
+/*
+    boolean类型，1不等于true,0不等于false
+*/
+var isLogin = false; // 同 let isLogin = false
+/*
+    string类型
+*/
 var str = 'hello world';
-// 4、any
+var str2 = "bye bye " + str;
+/*
+    any类型
+*/
 var anything; // let anything;

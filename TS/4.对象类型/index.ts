@@ -8,7 +8,10 @@ let dataObj:{name:string,age:number} = {
 
 
 // 复杂对象
-let complex:{ data:number[],myfunc:(item:number) => number[] } = {
+let complex:{ 
+    data:number[],
+    myfunc:(item:number) => number[] 
+} = {
     data:[1,2,3],
     myfunc:function(item:number):number[]{
         this.data.push(item);

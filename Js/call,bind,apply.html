@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var name = '盲僧',age = 17;
+    var obj = {
+        name:"薇恩",
+        myFun:function(from,to){
+            console.log(this.name +" "+this.age," "+from+" "+to)
+        }
+    }
+    var other = {
+        name:"盖伦",
+        age:"30"
+    }
+    // 共同点 第一个参数都是 this 的指向对象
+    obj.myFun.call(other,'上路','下路'); // 逗号分隔，参数string
+    obj.myFun.apply(other,['上路','下路']); // 数组
+    console.log(obj.myFun.bind(other)) // 返回函数
+    obj.myFun.bind(other,'上路','下路')(); // 需要执行，参数和Call一样
+
+</script>
+</body>
+</html>

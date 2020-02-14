@@ -1,2 +1,4 @@
 1、下拉刷新插件
 react-infinite-scroller
+2、滚动包裹
+react-custom-scrollbars

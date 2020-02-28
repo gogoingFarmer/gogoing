@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function T(name) {      
+        this.Name = name;      
+        var x = 5;                 　　　
+        function privateFunc(){          
+            alert('in private method: do sometheing');      　　
+        }                 　　
+        this.PublicFunc = function() {          
+            // 可以调用私有方法，访问私有成员变量。          　　
+            privateFunc();          　　   
+            alert('x = ' + x);          
+            alert('in public method: do something else.');      
+        }  
+    }
+
+</script>   
+</body>
+</html>

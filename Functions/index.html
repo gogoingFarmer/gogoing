@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+<script>
+    // 字符串替换
+    String.prototype.replaceAll = function(search,replacement){
+        var target = this;
+        return target.replace(new RegExp(search,'g'), replacement);
+    }
+    let str = 'abcabc';
+    console.log(str.replaceAll('a','d')) // 所有a替换成d
+</script>
+<script>
+    console.log(myFuns.getNowTime()) // 获取当前时间
+    console.log(myFuns.formatTime(new Date())) // 获取时间
+    console.log(myFuns.formatTime( new Date(new Date().getTime() - 365*24*60*60*1000)) ) // 获取前1年
+    console.log(myFuns.getNowDate(),myFuns.getNowDate(-7)) // 获取今天和前7天
+    
+    console.log(myFuns.toDecimalNumber(10000)) // 数字转换成逗号分隔
+    console.log(myFuns.splitStringVal('10000')) // 字符串形势
+    console.log(myFuns.GetRandomNum(1000,1200)) // 区间随机数
+</script>
+</body>
+</html>
